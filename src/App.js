@@ -34,44 +34,45 @@ const App = () => {
   return (
     <div className="container-fluid mt-4">
       <div className="row">
-        <div className="col-2">
-          <nav className="navbar navbar-expand-lg navbar-dark bg-dark flex-column">
-            <Link className="navbar-brand" to="/">Mural Interactivo</Link>
-            <ul className="navbar-nav flex-column">
-              {user ? (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/posts">Posts</Link>
-                  </li>
-                  <li className="nav-item">
-                    <button className="btn btn-link nav-link" onClick={handleLogout}>Cerrar sesión</button>
-                  </li>
-                </>
-              ) : (
-                <>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/register">Regístrate</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/login">Iniciar sesión</Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/posts">Posts</Link>
-                  </li>
-                </>
-              )}
-            </ul>
-          </nav>
-        </div>
-        <div className="col-10">
-          <Routes>
-            <Route path="/" element={<Posts />} />
-            <Route path="/register" element={!user ? <Register /> : <Posts />} />
-            <Route path="/login" element={!user ? <Login /> : <Posts />} />
-            <Route path="/posts" element={<Posts />} />
-          </Routes>
-        </div>
-      </div>
+  <div className="col-2">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark flex-column">
+    <Link className="nav-link fs-2" to="" >Mural Interactivo</Link>
+      <ul className="navbar-nav flex-column">
+        {user ? (
+          <>
+            <li className="nav-item">
+              <Link className="nav-link" to="/posts"> Posts</Link>
+            </li>
+            <li className="nav-item">
+              <button className="btn btn-link nav-link" onClick={handleLogout}>Cerrar sesión</button>
+            </li>
+          </>
+        ) : (
+          <>
+            <li className="nav-item">
+              <Link className="nav-link" to="/register">Regístrate</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Iniciar sesión</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/posts">Posts</Link>
+            </li>
+          </>
+        )}
+      </ul>
+    </nav>
+  </div>
+  <div className="col-10">
+    <Routes>
+      <Route path="/" element={<Posts />} />
+      <Route path="/register" element={!user ? <Register /> : <Posts />} />
+      <Route path="/login" element={!user ? <Login /> : <Posts />} />
+      <Route path="/posts" element={<Posts />} />
+    </Routes>
+  </div>
+</div>
+
     </div>
   );
 };
