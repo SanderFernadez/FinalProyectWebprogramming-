@@ -1,0 +1,134 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor general */
+
+
+#FormContainer.card{
+  margin-top: 1200px;
+}
+
+/* Ajustes para el contenedor de posts */
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+
+}
+
+/* Estilo para las tarjetas de post */
+
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+/* Imagenes en los posts */
+.card img {
+  
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #e9ecef;
+ 
+  object-fit: cover;
+}
+
+/* Iframes de YouTube */
+iframe {
+  border-radius: 10px;
+  margin-top: 15px;
+  height: 300px;
+}
+
+/* Estilo para el formulario */
+textarea.form-control, input.form-control {
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Estilo de placeholder */
+textarea.form-control::placeholder, input.form-control::placeholder {
+  color: #868e96;
+  font-style: italic;
+}
+
+/* Card del formulario */
+.card.mb-4 {
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body form textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="text"].form-control {
+  font-size: 0.9rem;
+  height: 45px;
+  
+}
+
+/* Estilo para el botón de publicar */
+button.btn {
+  font-weight: bold;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+button.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+}
+
+button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: #6c757d;
+}
+
+/* Espaciado y bordes para el input de la imagen */
+input.form-control[type="text"] {
+  margin-bottom: 15px;
+}
+
+/* Estilo para el texto de URL de imagen */
+.text-muted {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+/* Card en posts listados */
+.posts-list .card {
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.posts-list .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}

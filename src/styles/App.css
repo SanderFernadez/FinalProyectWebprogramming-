@@ -1,0 +1,90 @@
+.navbar {
+  background-color: #0a81f8 !important;
+  padding: 15px;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;  /* Ajusta el ancho de la barra lateral */
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; /* Hace que los elementos se alineen en columna */
+  width: 100%;
+}
+
+.navbar .nav-item {
+  margin-left: 0;
+  margin-bottom: 10px; /* Ajuste de espacio entre elementos */
+}
+
+.navbar .nav-link {
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: #FFD700;
+}
+
+button {
+  font-weight: bold;
+  background-color: #FFA500;
+  border-color: #FFA500;
+  color: white;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #FF8C00;
+  border-color: #FF8C00;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.navbar-nav .active .nav-link {
+  color: #FFD700 !important;
+}
+
+.navbar a {
+  color: white !important;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #FFD700 !important;
+}
+
+.container-fluid {
+  margin-left: 250px; /* Deja espacio para la barra lateral */
+  padding-top: 40px; /* Ajusta el contenido para no solaparse con la barra */
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.col-10 {
+  margin-left: 20px; /* Añade un pequeño margen a la columna principal */
+}
+

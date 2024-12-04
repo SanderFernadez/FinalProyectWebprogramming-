@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+// src/index.js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom"; // Asegúrate de importar BrowserRouter
+import { AuthProvider } from './context/AuthContext'; // Asegúrate de importar el AuthProvider
+import App from "./App";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+// Aquí envolvemos la aplicación con AuthProvider y Router
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <AuthProvider> {/* Envuelve la aplicación con el AuthProvider */}
+    <Router>
+      <App />
+    </Router>
+  </AuthProvider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
